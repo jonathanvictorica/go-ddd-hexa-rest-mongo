@@ -1,0 +1,13 @@
+use ABMPersona
+
+db.createUser(
+{
+  user: "abmpersonas",
+  pwd: "123456789",
+  roles: [
+    "dbOwner"
+  ]
+}
+);
+
+mongo -u abmpersonas -p 123456789 --authenticationDatabase ABMPersona
